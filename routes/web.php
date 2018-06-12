@@ -12,9 +12,7 @@
 */
 
 Route::get('/', function () {
-    return 'first logic laravel fw';
+    return 'Laravel fw';
 });
 
-Route::get('/', function () {
-    return 'sec logic laravel fw';
-});
+Route::get('/produtos',	'Produto@lista');
