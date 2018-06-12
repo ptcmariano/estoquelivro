@@ -15,4 +15,5 @@ Route::get('/', function () {
     return 'Laravel fw';
 });
 
-Route::get('/produtos',	'Produto@lista');
+Route::get('/produtos', 'Produto@lista');
+Route::get('/produto/mostra', 'Produto@mostra');
