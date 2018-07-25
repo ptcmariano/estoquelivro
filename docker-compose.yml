@@ -9,6 +9,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_USER: root
+      MYSQL_DATABASE: homestead
+      LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN: 1
 
   redis:
     image: redis:alpine
@@ -40,7 +42,7 @@ services:
     container_name: php
     depends_on:
       - redis
-    command: bash -c "sh crontab-install.sh && php-fpm"
+    command: bash -c "php-fpm"
     environment:
       REDIS_HOST: 'redis'
       ELASTICSEARCH_HOST: 'elasticsearch'
